@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
 import express from 'express';
 import userRouter from './routers/users.js';
+import dotenv from 'dotenv';
 
+
+dotenv.config()
 const app = express();
 
-mongoose.connect('mongodb+srv://rachelik:6MriAkoTU2VutpqC@cluster0.um0lgjc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(process.env.MONGODB_CONNECTION)
     .then(() => {
         console.log('Connected to database');
     })
