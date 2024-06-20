@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import express from express;
+import express from 'express';
 import userRouter from './routers/users.js';
 
 const app = express();
