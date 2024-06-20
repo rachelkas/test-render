@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <h1>test test test</h1>
-      <button onClick={(e) => fetchUsers(e)}></button>
+      <button onClick={(e) => fetchUsers(e)}>send</button>
     </div>
   );
 }
