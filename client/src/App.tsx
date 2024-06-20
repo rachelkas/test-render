@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,6 +9,8 @@ function App() {
     e.preventDefault();
     const response = await fetch('https://test-render-stsd.onrender.com/api/users');
     const body = await response.json();
+    console.log("body", body);
+
     setUsers(body);
 
   }
@@ -21,7 +22,7 @@ function App() {
       <div>
         <ul>
           {users.map((user: any) => (
-            <li></li>
+            <li>{user.email}</li>
           ))}
         </ul>
       </div>
