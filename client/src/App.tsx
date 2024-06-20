@@ -8,7 +8,7 @@ function App() {
 
   const fetchUsers = async (e: any) => {
     e.preventDefault();
-    const response = await fetch('https://test-render-stsd.onrender.com/api/users');
+    const response = await fetch('/api/users');
     const body = await response.json();
     console.log(body);
 
