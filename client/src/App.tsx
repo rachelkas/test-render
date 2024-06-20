@@ -22,7 +22,7 @@ function App() {
       <div>
         <ul>
           {users.map((user: any) => (
-            <li>{user}</li>
+            <li>{user.userName}{user.email}</li>
           ))}
         </ul>
       </div>
