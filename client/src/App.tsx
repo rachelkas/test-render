@@ -10,7 +10,7 @@ function App() {
     e.preventDefault();
     const response = await fetch('https://test-render-stsd.onrender.com/api/users');
     const body = await response.json();
-    console.log(body);
+    setUsers(body);
 
   }
 
@@ -18,6 +18,13 @@ function App() {
     <div className="App">
       <h1>test test test</h1>
       <button onClick={(e) => fetchUsers(e)}>send</button>
+      <div>
+        <ul>
+          {users.map((user: any) => (
+            <li></li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
